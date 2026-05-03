@@ -15,3 +15,4 @@ for _ in range(m):
 
 
 dist = dijkstra(graph, 1)
+
