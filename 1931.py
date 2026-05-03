@@ -1,5 +1,6 @@
 import heapq
 
+# No Linux, execute "python3 1931.py < 1931-test2.txt" para testar o código com o arquivo de teste.
 
 # Você precisa modificar o algoritmo de dijkstra abaixo para resolver o problema!
 def dijkstra(graph, source):

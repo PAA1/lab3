@@ -1,3 +1,6 @@
+# No Linux, execute "python3 1766.py < 1766-test1.txt" para testar o código com o arquivo de teste.
+
+
 T = int(input())
 
 for t in range(1, T + 1):
