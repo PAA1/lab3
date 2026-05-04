@@ -19,9 +19,9 @@ def dijkstra(graph, source):
     """
 
     # Inicialização
-    processado = set()
-    dist = {v: float('inf') for v in graph.keys()}
-    parent = {v: None for v in graph.keys()}
+    processado = {v : False for v in graph.keys()}  # para marcar nós processados
+    dist = {v : float('inf') for v in graph.keys()}
+    parent = {v : None for v in graph.keys()}
 
     dist[source] = 0  # Origem começa com distância zero
 
@@ -30,9 +30,9 @@ def dijkstra(graph, source):
     while fila:  # enquanto fila não for vazia
         du, u = heapq.heappop(fila)  # extrai nodo com menor distância na fila
     
-        if u in processado:
+        if processado[u]:
             continue
-        processado.add(u)
+        processado[u] = True
 
         for v, wv in graph[u]:    # para cada vizinho v de u
             novo_dv = du + wv     # distância até u mais peso da aresta u-v
